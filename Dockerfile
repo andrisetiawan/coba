@@ -24,3 +24,4 @@ ENTRYPOINT mix phoenix.server
 
 # docker build -t infobola .
 # docker run -p 0.0.0.0:3000:4000 infobola -it
+# docker run -p 0.0.0.0:80:4000 infobola -it

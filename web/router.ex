@@ -17,11 +17,11 @@ defmodule Infobola.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    post "/webhook", PageController, :webhook
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Infobola do
-  #   pipe_through :api
-  # end
+  scope "/api", Infobola do
+    pipe_through :api
+    post "/webhook", PageController, :webhook
+  end
 end

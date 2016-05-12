@@ -22,6 +22,6 @@ defmodule Infobola.Router do
   # Other scopes may use custom stacks.
   scope "/api", Infobola do
     pipe_through :api
-    post "/webhook", PageController, :webhook
+    post "/webhook", BotController, :webhook
   end
 end
